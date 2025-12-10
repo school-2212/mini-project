@@ -10,6 +10,8 @@ Voronoi::Voronoi(int rows, int cols) : rows(rows), cols(cols) {
     grid.resize(rows, std::vector<std::string>(cols, ""));
 }
 
+Voronoi::~Voronoi() = default;
+
 void Voronoi::addSeed(std::unique_ptr<Seed> seed) {
     if (out_of_bounds(seed->getRow(), seed->getCol())) {
         throw std::out_of_range("Seed position is out of bounds.");

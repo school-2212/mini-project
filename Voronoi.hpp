@@ -17,6 +17,8 @@ class Voronoi {
     public:
         Voronoi(int rows, int cols);
 
+        ~Voronoi();
+
         void addSeed(std::unique_ptr<Seed> seed);
 
         void reset(int newRows, int newCols);
