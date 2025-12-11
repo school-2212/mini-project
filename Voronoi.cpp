@@ -34,7 +34,6 @@ void Voronoi::reset(int newRows, int newCols) {
 }
 
 void Voronoi::draw() {
-    
     struct Node {
         int row;
         int col;

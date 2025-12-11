@@ -32,5 +32,5 @@ coverage: clean $(TARGET)
 	gcov -b -c Voronoi.cpp
 	gcov -b -c Seeds.cpp
 
-memcheck: $(TARGET)
+valgrind: $(TARGET)
 	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(TARGET)
